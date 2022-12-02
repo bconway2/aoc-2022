@@ -7,13 +7,26 @@ def part_one(calorie_chart):
     elf_cals = 0
     elves_cals = []
     for entry in calorie_chart:
-        if entry != '\n':
+        if entry != '':
             elf_cals += int(entry)
         else:
             elves_cals.append(elf_cals)
             elf_cals = 0
     elves_cals.append(elf_cals)
-    return elves_cals
+    return max(elves_cals)
+
+def part_two(calorie_chart):
+    elf_cals = 0
+    elves_cals = []
+    for entry in calorie_chart:
+        if entry != '':
+            elf_cals += int(entry)
+        else:
+            elves_cals.append(elf_cals)
+            elf_cals = 0
+    elves_cals.append(elf_cals)
+    elves_cals.sort(reverse=True)
+    return sum(elves_cals[0:3])
 
 d = get_input('input.txt')
 part_one(get_input('input.txt'))
