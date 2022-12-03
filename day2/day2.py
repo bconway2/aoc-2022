@@ -48,4 +48,6 @@ def main():
     print(part_one(sg))
     print(part_two(sg))
     return
-    
+
+if __name__ == "__main__":
+    main()    
