@@ -5,14 +5,12 @@ def get_input(infile):
 
 def part_one(input_code):
     for i in range(4,len(input_code)):
-        if (len(set(input_code[i-4:i]) & set(input_code[i-4:i]))) == 4:
-            return i
+        if (len(set(input_code[i-4:i]))) == 4: return i
     return 'Fail'
 
 def part_two(input_code):
     for i in range(14,len(input_code)):
-        if (len(set(input_code[i-14:i]) & set(input_code[i-14:i]))) == 14:
-            return i
+        if (len(set(input_code[i-14:i]))) == 14: return i
     return 'Fail'
 
 def main():
